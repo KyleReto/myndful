@@ -4,7 +4,7 @@
   "description": "This site is the central place to view any of the numerous quotes from the illustrious DSS and its brilliant members. Just click the button and see what you find.",
   "main": "app.js",
   "dependencies": {
-    "ejs": "^3.1.6",
+    "ejs": "^3.1.7",
     "express": "^4.17.1",
     "express-session": "^1.17.2",
     "markdown-it": "^12.1.0",
