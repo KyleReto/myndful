@@ -1,0 +1,28 @@
+{
+  "name": "booksite",
+  "version": "1.0.0",
+  "description": "This site is the central place to view any of the numerous quotes from the illustrious DSS and its brilliant members. Just click the button and see what you find.",
+  "main": "app.js",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "markdown-it": "^12.1.0",
+    "mongoose": "^5.13.2",
+    "nodemon": "^2.0.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KyleReto/BookOfTheDSS.git"
+  },
+  "author": "Kyle Reto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KyleReto/BookOfTheDSS/issues"
+  },
+  "homepage": "https://github.com/KyleReto/BookOfTheDSS#readme"
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<%- include ('partials/head'); -%>
+	<link rel="stylesheet" href="/assets/stylesheets/quote.css">
+	<link rel="stylesheet" href="/assets/stylesheets/search.css">
+</head>
+<body>
+<header>
+	<%- include ('partials/nav'); %>
+</header>
+<main>
+	<%
+	if (typeof quotes != 'undefined'){
+		quotes.forEach(function(quote, key){%>
+			<a href='/quote/<%=key%>'>
+				<div class="searchQuote">
+				<%- include ('partials/quote', {quote: quote, linksEnabled: false, avatars: avatars}); -%>
+				</div>
+			</a>
+			<br>
+		<% });
+	}%>
+</main>
+<footer>
+	<%- include ('partials/footer'); -%>
+</footer>
+</body>
+</html>

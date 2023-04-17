@@ -1,0 +1,6 @@
+<%// "a" tags don't work on partials that are loaded multiple times on the same page so we're using an onclick to bypass that%>
+<tr class="profileBanner" onclick="document.location='/profiles/<%=name%>'">
+	<th><img class="pfp" src="../assets/avatars/<%=name%>.png"></th>
+	<th><%=name%></th>
+	<th><img class="chart" src="../assets/charts/<%=name.toLowerCase()%>_chart.png"></th>
+</tr>

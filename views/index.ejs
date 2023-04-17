@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<link rel="stylesheet" href="../assets/stylesheets/profile.css">
+    <%- include ('partials/head'); -%>
+</head>
+<body>
+<header>
+  <%- include ('partials/nav'); -%>
+</header>
+<main>
+    <div class="white">
+		<p>This site is a celebration of 7 years of history and a compilation of things we've said.</p>
+		<img src="../assets/dsslogo.png" style="height:300px;">
+		<br>
+		<h1>DSS Members</h1>
+		<table>
+			<%- include ('partials/stats', {name: 'Kyle'}); -%>
+			<%- include ('partials/stats', {name: 'Jayson'}); -%>
+			<%- include ('partials/stats', {name: 'Jon'}); -%>
+			<%- include ('partials/stats', {name: 'David'}); -%>
+			<%- include ('partials/stats', {name: 'Matt'}); -%>
+			<%- include ('partials/stats', {name: 'Chris'}); -%>
+			<%- include ('partials/stats', {name: 'Zach'}); -%>
+			<%- include ('partials/stats', {name: 'Obt'}); -%>
+			<%- include ('partials/stats', {name: 'Abi'}); -%>
+			<%- include ('partials/stats', {name: 'Hiep'}); -%>
+			<%- include ('partials/stats', {name: 'Jakob'}); -%>
+			<%- include ('partials/stats', {name: 'Rodge'}); -%>
+			<%- include ('partials/stats', {name: 'Noah'}); -%>
+			<%- include ('partials/stats', {name: 'Tahseen'}); -%>
+			<%- include ('partials/stats', {name: 'Claire'}); -%>
+		</table>
+		<br>
+    </div>
+</main>
+<footer>
+    <%- include ('partials/footer'); -%>
+</footer>
+</body>
+</html>

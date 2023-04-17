@@ -1,0 +1,144 @@
+body {
+	margin: 0;
+    background-color: #36393f;
+}
+
+header {
+    background-color: #202225;
+    padding: 1em;
+    border-bottom: ridge;
+    border-bottom-color: #4f545c;
+    border-bottom-width: thick;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+main{
+    padding-top: 80px;
+    text-align: center;
+}
+
+.tab {
+    padding: 20px 35px 15px 35px;
+    font-size: 1.2em;
+	font-family: Ginto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 600;
+}
+.tabContainer {
+    height: 3em;
+    width: 75%;
+    display:flex;
+    align-items:center;
+}
+
+.tabContainer .icon {
+    font-size: 1.5em;
+    display: none;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+    .tabContainer a {display: none;}
+    .tabContainer a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+.tabContainer.responsive {position: relative;}
+    .tabContainer.responsive .tab {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+} 
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #999999;
+}
+
+.logo {
+	width: 65px;
+	display: flex;
+}
+
+.logoContainer {
+	width: 100px;
+}
+
+.searchQuery{
+    padding-right: 30px;
+    background-color: #36393f;
+    color: #dcddde;
+    border: 0;
+    font-size: 14px;
+    height: 30px;
+    width: 210px;
+}
+
+.searchSubmit{
+    position: relative;
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: -30px;
+    top: 4px;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    color: #dcddde;
+}
+
+.searchSubmit:hover{
+    cursor:pointer;
+}
+
+.quoteContainer{
+    margin: auto;
+    z-index: 2;
+    display: flex;
+    margin-top: 0;
+    flex-shrink: 0;
+}
+
+.searchQuote{
+    display: inline-block;
+    width: 50%;
+    margin: auto;
+    padding: 0 25px;
+    border-style: groove;
+}
+
+#searchForm{
+    position: fixed;
+    width: 250px;
+    right: 2%;
+}
+
+.prevQuote, .nextQuote{
+    font-size:8em;
+    display: flex;
+    background-color: transparent;
+    border: 0;
+    color: #dcddde;
+    padding: 0 20px;
+}
+
+.prevQuote:hover, .nextQuote:hover{
+    color: purple;
+    cursor: pointer;
+}
+
+.quoteButtonsContainer{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+}

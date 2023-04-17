@@ -1,0 +1,125 @@
+body{
+  background-color: #36393f;
+}
+
+p{
+  margin: 0;
+}
+
+.quote{
+  padding-top: 20px;
+  background-color: #36393f;
+  user-select: none;
+  margin: auto;
+  line-height: 10px;
+  caret-color: transparent;
+  text-align: left;
+}
+
+.message{
+  margin: 0;
+  padding-top: .125rem;
+  padding-bottom:.125rem;
+  font-family: Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.avatar{
+  display: inline-block;
+  position: relative;
+  margin-top: calc(0px - .125rem);
+  padding-right: 20px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  user-select: none;
+  vertical-align: top;
+}
+
+.contents{
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  max-width: 45rem;
+  white-space: normal;
+  margin-right: 50px;
+}
+
+.avatar img{
+  max-width: 100%;
+  max-height: 100%;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.nameHeader{
+  margin: 0;
+}
+
+.username{
+  user-select: text;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.375rem;
+  display: inline;
+  vertical-align: baseline;
+  position: relative;
+  overflow: hidden;
+  /* These names are used by the program, and thus need to be in this specific format */
+  --username-Jon: #02c700;
+  --username-Matt: #c60101;
+  --username-David: #ffe300;
+  --username-Kyle: #4452ff;
+  --username-Zach: #ff0061;
+  --username-Chris: #cc00ff;
+  --username-Max: #1a7939;
+  --username-Jayson: #ff0094;
+  --username-Hiep: #00a5ff;
+  --username-Tahseen: #ff0000;
+  --username-Jakob: #ff7400;
+  --username-Rodge: #ff0808;
+  --username-Jack: #000001;
+  --username-Nicc: #da004e;
+  --username-Noah: #0080ff;
+  --username-Imon: #71368a;
+  --username-James: #e74c3c;
+  --username-Claire: #ff82e6;
+}
+
+.username:hover{
+  text-decoration: underline;
+}
+
+.messageText{
+  user-select: text;
+  margin-left: calc(0px - var(--avatar-message-distance));
+  padding-left: var(--avatar-message-distance);
+  overflow: hidden;
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+  color: var(--text-normal);
+}
+
+.embed img{
+  width: 100%;
+  max-width: 100%;
+}
+
+.embed {
+  display: inline-block;
+  max-width:30rem;
+}
+
+.quote{
+  --text-normal: #dcddde;
+}
+
+.emoji{
+  height: 1.4rem;
+  vertical-align: middle;
+  margin-bottom: 3px;
+}
