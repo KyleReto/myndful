@@ -1,0 +1,49 @@
+<div class="quote">
+	<% quote.messages.forEach(function(item){   %>
+	<div class="message">
+		<%
+			// You can't put a link on a link with ejs, so this prevents that)
+			// I promise you this is the most clean way to write this, if I want to keep this as a universally applicable template
+			if (linksEnabled === true){
+		%>
+		<a href="/profiles/<%=item.sender%>">
+			<%}%>
+			<div class="avatar">
+				<%
+				// Strip special characters
+				let username = item.sender.replace(/[^\w\s]/gi, '');
+
+				let imageName = avatars[username];
+				%>
+				<img src="/assets/<%=imageName%>">
+			</div>
+		<%if (linksEnabled === true){%>
+		</a> <%}%>
+		<div class="contents">
+			<h2 class="nameHeader">
+				<%
+				let string = item.sender.replace(/[^a-zA-Z]/g, "");
+				let style = "color:var(--username-"+ string + ")"; 
+				%>
+				<%if (linksEnabled === true){%>
+				<a href="/profiles/<%=item.sender%>"><%}%>
+					<span class="username" style= <%=style%> >
+						<%=item.sender%>
+					</span>
+				<%if (linksEnabled === true){%>
+				</a><%}%>
+			</h2>
+			<div class="messageText">
+				<%-item.text%>
+			</div>
+			<% if(typeof item.embedPath == 'string'){ %>
+			<div class="embed">
+				<img src="/assets/embeds/<%=item.embedPath%>">
+			</div>
+			<% } %>
+		</div>
+	</div>
+	<br>
+	<%});%>
+
+</div>

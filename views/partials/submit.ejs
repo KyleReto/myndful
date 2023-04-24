@@ -1,0 +1,66 @@
+<script>
+$('document').ready(function () {
+    $('.messageText').each(function(){
+        this.rows = this.scrollHeight/22;
+    });
+});
+</script>
+<div class='quoteContainer'>
+    <form id="submissionForm" method="POST" action="/chat">
+        <div class="formContainer" id="formContainer">
+            <% quote.messages.forEach(function(item){   %>
+                <div class="message">
+                    <%
+                        // You can't put a link on a link with ejs, so this prevents that)
+                        if (linksEnabled === true){
+                    %>
+                    <a>
+                        <%}%>
+                        <div class="avatar">
+                            <%
+                            // Strip special characters
+                            let username = item.sender.replace(/[^\w\s]/gi, '');
+            
+                            let imageName = avatars[username];
+                            %>
+                            <img src="/assets/<%=imageName%>">
+                        </div>
+                    <%if (linksEnabled === true){%>
+                    </a> <%}%>
+                    <div class="contents">
+                        <h2 class="nameHeader">
+                            <%
+                            let string = item.sender.replace(/[^a-zA-Z]/g, "");
+                            let style = "color:var(--username-"+ string + ")"; 
+                            %>
+                            <%if (linksEnabled === true){%>
+                            <a><%}%>
+                                <input class="username" type="text" name="sender" value= <%=item.sender%> style= <%=style%> readonly>
+                            <%if (linksEnabled === true){%>
+                            </a><%}%>
+                        </h2>
+                        <div class="messageText" color="white">
+                            <textarea cols="10" rows="1" wrap="soft" name="message"  class="messageText" readonly><%-item.text%></textarea>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            <%});%>
+            <div class="avatar">
+                <img src="/assets/user.png">
+            </div>
+            <div class="contents">
+                <h2 class="nameHeader">
+                    <input type="text" name="sender" value="You" class="username" style='color:var(--username-You)' readonly>
+                </h2>
+                <div class="messageText">
+                    <textarea rows="3" cols="10" wrap="soft" name="message" placeholder="Message text" class="messageText"></textarea>
+                </div>
+            </div>
+            <br>
+        </div>
+        <button class="submitButton" id="submitForm" type="submit">Send</button>
+        <br>
+        <div style="text-align: center; padding-right:5%; margin-top:12px"><a href="/" style="text-decoration: underline;;">Restart the lesson.</a></div>
+    </form>
+</div>
