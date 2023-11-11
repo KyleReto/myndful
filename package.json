@@ -11,7 +11,7 @@
     "markdown-it": "^12.3.2",
     "mongoose": "^5.13.20",
     "nodemon": "^2.0.22",
-    "openai": "^3.2.1"
+    "openai": "^4.17.4"
   },
   "devDependencies": {},
   "scripts": {
